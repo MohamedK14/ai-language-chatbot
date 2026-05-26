@@ -23,39 +23,40 @@ An interactive web app for practicing foreign languages with an AI tutor. Type o
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### Prerequisites
+- [Python 3.8+](https://www.python.org/downloads/) installed
+- A free [OpenRouter API key](https://openrouter.ai/keys)
+
+---
+
+### 🪟 Windows — easy setup (no terminal needed)
+
+1. Clone or download this repository
+2. Open the `.env.example` file, copy it and rename the copy to `.env`, then paste your OpenRouter API key inside
+3. Double-click **`setup.bat`** — installs everything automatically
+4. Double-click **`start.bat`** — launches the app in your browser
+
+---
+
+### 💻 Manual setup (any OS)
 
 ```bash
-git clone https://github.com/your-username/ai-language-chatbot.git
+# 1. Clone the repo
+git clone https://github.com/MohamedK14/ai-language-chatbot.git
 cd ai-language-chatbot
-```
 
-### 2. Install Python dependencies
-
-```bash
+# 2. Install dependencies
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-```
 
-### 3. Set up your API key
+# 3. Set up your API key
+cp .env.example .env   # then open .env and paste your key
 
-Create a `.env` file in the project root (copy from the example):
-
-```bash
-cp .env.example .env
-```
-
-Then open `.env` and paste your [OpenRouter API key](https://openrouter.ai/keys).
-
-### 4. Run the backend
-
-```bash
+# 4. Run the backend
 python app.py
+
+# 5. Open index.html in your browser
 ```
-
-### 5. Open the frontend
-
-Open `index.html` directly in your browser — or serve it with any static file server.
 
 > The backend runs on `http://127.0.0.1:5000` by default.
 
@@ -66,6 +67,8 @@ Open `index.html` directly in your browser — or serve it with any static file 
 ├── index.html       # Main page
 ├── script.js        # Chat logic, voice mode, conversation history
 ├── styles.css       # Dark-theme styling
+├── setup.bat        # Windows: one-click first-time setup
+├── start.bat        # Windows: one-click app launcher
 ├── requirements.txt # Python dependencies
 ├── .env.example     # Template for environment variables
 └── .gitignore
