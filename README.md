@@ -1,5 +1,7 @@
 # 🌍 AI Language Practice Chatbot
 
+🔴 **Live demo: [ai-language-chatbot.onrender.com](https://ai-language-chatbot.onrender.com)**
+
 An interactive web app for practicing foreign languages with an AI tutor. Type or speak in your chosen language and get instant corrections and natural conversation in return.
 
 ## ✨ Features
