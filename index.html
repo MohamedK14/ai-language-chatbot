@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Language Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <div  class="container">
+        <h1>AI Language Practice</h1>
+        <p class="subtitle">Practice languages with a smart chatbot</p>
+
+        <!-- Language Selector -->
+        <div class="language-select">
+            <label for="language">Choose a language:</label>
+            <select id="language">
+                <option value="options">Options</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="arabic">Arabic</option>
+                <option value="english">English</option>
+                <option value="italian">Italian</option>
+                <option value="romanian">Romanian</option>
+            </select>
+        </div>
+
+        <!-- Welcome message after choosing a language -->
+         <p id="welcomeMsg"></p >
+
+        <!-- Chat Display -->
+        <div  id="chatbox" class="chatbox">
+            <div class="message bot">
+                Hello! Select a language and start practicing 😊
+            </div>
+        </div>
+
+        <!-- User Input -->
+        <div class="input-area">
+            <textarea id="userInput" placeholder="Type a message..." rows="2"></textarea>
+            <button id="voiceBtn" title="Toggle voice mode">🎤</button>
+            <button id="sendBtn">Send</button>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
