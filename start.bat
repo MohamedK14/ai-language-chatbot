@@ -13,9 +13,9 @@ if not exist .env (
 
 echo Starting server... (this window must stay open)
 echo.
-echo The app will open in your browser automatically.
+echo Opening app in your browser...
 echo To stop the app, close this window.
 echo.
 
-start "" "index.html"
+start "" "http://localhost:5000"
 python app.py

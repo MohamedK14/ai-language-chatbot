@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import os
 import spacy
@@ -8,8 +8,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Flask setup
-app = Flask(__name__)
+app = Flask(__name__, static_folder=".", static_url_path="")
 CORS(app)
+
+
+# Serve the frontend
+@app.route("/")
+def index():
+    return send_from_directory(".", "index.html")
 
 # Load spaCy
 nlp = spacy.load("en_core_web_sm")
@@ -125,4 +131,5 @@ def check():
 
 # Run server
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug = os.getenv("FLASK_DEBUG", "false").lower() == "true"
+    app.run(debug=debug)
